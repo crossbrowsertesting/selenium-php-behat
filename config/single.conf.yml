@@ -1,0 +1,35 @@
+default:
+    paths:
+        # where to look for *.feature files:
+        features: '../features'
+        # where the steps are defined:
+        bootstrap:  '../features/bootstrap'
+    extensions: 
+        Behat\MinkExtension\Extension:
+            selenium2: ~
+            default_session: selenium2
+    context:
+        parameters:
+            cbt:
+                server: "crossbrowsertesting.com"
+                user: "johnr@crossbrowsertesting.com"
+                key: "ua2ed3a3457581e4"
+
+                capabilities:
+                    # capabilities added here are applied to every test that is run
+                    name: "Behat - single test"
+                    build: "1.0.0"
+                    record_video: "true"
+                    record_network: "true"
+                    max_duration: 300 # time in seconds
+
+                browsers:
+                    # each item in this list is run as a single test
+                    # so to run multiple tests in parallel, 
+                    # simply define multiple browsers below and run the test with 
+                    # $ php run-parallel.php config/<filename>.yml
+                    -
+                        os_api_name: "Win10"
+                        browser_api_name: "Edge20"
+                        resolution: "1920x1080"
+                
