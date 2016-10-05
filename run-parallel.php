@@ -5,7 +5,6 @@ require 'vendor/autoload.php';
 use Symfony\Component\Yaml\Yaml;
 
 $config_file = getenv('CONFIG_FILE');
-print "argv is " . $argv[1] . "\n" ;
 if(!$config_file) $config_file = $argv[1];
 if(!$config_file) $config_file = 'config/single.conf.yml';
 

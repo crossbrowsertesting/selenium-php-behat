@@ -31,15 +31,11 @@ class CBTContext extends Behat\Behat\Context\BehatContext
         # get the capabilities for this test_run_id 
         # caps contains the os, browser, and resolution
         $browserCaps = $CONFIG["browsers"][$test_run_id];
-        print("browserCaps are ");
-        print_r($browserCaps);
         # pull in capabilities that we want applied to all tests 
         foreach ($CONFIG["capabilities"] as $capName => $capValue) {
             if(!array_key_exists($capName, $browserCaps))
                 $browserCaps[$capName] = $capValue;
         }
-        print("\n requesting a driver with the following capabilities: \n");
-        print_r($browserCaps);
 
         self::$driver = RemoteWebDriver::create($url, $browserCaps);
     }
