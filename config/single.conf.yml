@@ -13,7 +13,7 @@ default:
             cbt:
                 server: "crossbrowsertesting.com"
                 user: "johnr@crossbrowsertesting.com"
-                key: "ua2ed3a3457581e4"
+                key: "notmyrealauthkey"
 
                 capabilities:
                     # capabilities added here are applied to every test that is run
