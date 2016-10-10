@@ -146,6 +146,12 @@ To start the test, just run our helper file like this:
 $ php run-parallel.php config/ie.conf.yml
 ```
 
+### Websites behind your firewall
+
+If you have our Node module `cbt_tunnels` installed, you can run tests to websites behind your firewall by running `run-parallel.php` with the -l flag. 
+
+If you don't have `cbt_tunnels` installed, you can install it by running `$ npm install -g cbt_tunnels`.
+
 ## Help! 
 
 If you got stuck, or something doesn't make sense, don't worry! Just shoot an email to info@crossbrowsertesting.com and we'll help you out. 
