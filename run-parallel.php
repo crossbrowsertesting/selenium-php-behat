@@ -4,11 +4,23 @@
 require 'vendor/autoload.php';
 use Symfony\Component\Yaml\Yaml;
 
+include 'cbt-local.php';
+use CBT\LocalConnection;
+
 $config_file = getenv('CONFIG_FILE');
-if(!$config_file) $config_file = $argv[1];
+if(in_array('-c', $argv)){
+    $config_file = $argv[array_search('-c', $argv) + 1];
+}
 if(!$config_file) $config_file = 'config/single.conf.yml';
 
 $CONFIG = Yaml::parse(file_get_contents($config_file))["default"]["context"]["parameters"]["cbt"];
+
+if(in_array('-l', $argv)){
+    print $config['user'] . $CONFIG['key'];
+    $local = new LocalConnection($CONFIG['user'], $CONFIG['key']);
+    $local->start();
+}
+
 
 $procs = array();
 
@@ -24,6 +36,9 @@ foreach ($procs as $key => $value) {
         print fgets($value);
     }
     pclose($value);
+}
+if($local){
+    $local->stop();
 }
 
 ?>
