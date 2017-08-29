@@ -1,5 +1,7 @@
-<img src="https://crossbrowsertesting.com/design/images/cbt-sb_logo.svg" width="50%">
+<img src="https://crossbrowsertesting.com/design/images/brand/cbt-sb-logo.svg" width="50%">
+
 ----
+
 # Behat and CBT
 
 [Behat](http://behat.org/en/latest/) is a [Behavior Driven Development](https://dannorth.net/introducing-bdd/) test framework for PHP. The power of Behat, and BDD in general, is that your tests define how your application should *behave* in different *scenarios*. More than just confirming that parts of your application work, BDD helps define and clarify the overall design of your application. And since Behat/BDD tests are writen in [plain English](http://docs.behat.org/en/v2.5/guides/1.gherkin.html), they can be understood by devs, managers, marketers, and everyone else involved with your application. 
