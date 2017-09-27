@@ -145,7 +145,7 @@ I've included a configuration file that will run tests on IE8 through IE11 as we
 To start the test, just run our helper file like this:
 
 ```
-$ php run-parallel.php config/ie.conf.yml
+$ php run-parallel.php -c config/ie.conf.yml
 ```
 
 ### Websites behind your firewall
