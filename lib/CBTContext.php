@@ -37,7 +37,7 @@ class CBTContext extends Behat\Behat\Context\BehatContext
                 $browserCaps[$capName] = $capValue;
         }
 
-        self::$driver = RemoteWebDriver::create($url, $browserCaps);
+        self::$driver = RemoteWebDriver::create($url, $browserCaps, 120000, 120000);
     }
 
     /** @AfterFeature */
