@@ -25,7 +25,7 @@ class CBTContext extends Behat\Behat\Context\BehatContext
             $GLOBALS['CBT_URL'] = $GLOBALS['CONFIG']['base_url'];
 
 
-        self::$api = new Drewberry\Api($parameters['cbt']['user'], $parameters['cbt']['key']);
+        self::$api = new CBT\Api($parameters['cbt']['user'], $parameters['cbt']['key']);
     }
 
     /** @BeforeFeature */

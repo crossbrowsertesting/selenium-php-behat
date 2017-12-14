@@ -2,14 +2,12 @@
 /**
  * Drewberry™
  *
- * @author  Wagner Silva <wagner.silva@drewberry.co.uk>
- * @link <http://drewberryinsurance.co.uk>
+ * @author  Wagner Silva <wagnerjsilva@gmail.com>
+ * @link <https://twitter.com/wagnerjsilva>
  * @version 1.0
  */
 
-namespace Drewberry;
-
-require 'vendor/autoload.php';
+namespace CBT;
 
 class Api
 {
