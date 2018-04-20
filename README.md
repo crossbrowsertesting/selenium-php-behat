@@ -8,6 +8,8 @@
 
 ## Getting set up
 
+*This example is for Behat 2, if you are using Behat 3, please look at our [Behat3 Example](https://github.com/crossbrowsertesting/selenium-php-behat3)*
+
 ### Installing Composer
 
 First, make sure you have PHP Dependency Manager [**Composer**](https://getcomposer.org/) installed. Follow the instructions on their [download page](https://getcomposer.org/download/) to install it.
