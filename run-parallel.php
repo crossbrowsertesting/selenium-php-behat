@@ -26,7 +26,8 @@ $procs = array();
 
 foreach ($CONFIG['browsers'] as $index => $value) {
     // TEST_RUN_ID=0 ./bin/behat --config=single.conf.yml 2>&1
-    $cmd = "TEST_RUN_ID=$index ./bin/behat --config=" . $config_file . " 2>&1\n";
+    putenv("TEST_RUN_ID=$index");
+    $cmd = realpath("./bin/behat") . " --config=" . $config_file . " 2>&1\n";
     print $value['os_api_name'] . ", " . $value['browser_api_name'] . ", " . $value['resolution'] . "\n";
     $procs[$index] = popen($cmd, "r");
 }
