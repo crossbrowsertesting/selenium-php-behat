@@ -20,7 +20,7 @@ default:
                     name: "Behat - single test"
                     build: "1.0.0"
                     record_video: "true"
-                    record_network: "true"
+                    //record_network: "true"
                     max_duration: 300 # time in seconds
 
                 browsers:
