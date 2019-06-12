@@ -4,7 +4,7 @@ default:
         features: "../features"
         # where the steps are defined:
         bootstrap:  "../features/bootstrap"
-    extensions: 
+    extensions:
         Behat\MinkExtension\Extension:
             selenium2: ~
             default_session: selenium2
@@ -20,13 +20,13 @@ default:
                     name: "Behat - IE Test"
                     build: "1.0.0"
                     record_video: "true"
-                    record_network: "true"
+                    record_network: "false"
                     max_duration: 300 # time in seconds
 
                 browsers:
                     # each item in this list is run as a single test
-                    # so to run multiple tests in parallel, 
-                    # simply define multiple browsers below and run the test with 
+                    # so to run multiple tests in parallel,
+                    # simply define multiple browsers below and run the test with
                     # $ php run-parallel.php config/<filename>.yml
                     -
                         os_api_name: "Win10"
