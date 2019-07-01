@@ -116,14 +116,14 @@ $ bin/behat -c config/single.conf.yml
 
 Feature: Test a login form
 
-  Scenario: Login with bad credentials                                        # /Users/johnreese/Google Drive/CBT/repos/behat-browserstack/features/single/login.feature:3
+  Scenario: Login with bad credentials                                        # /Users/johnreese/Google Drive/CBT/repos/behat/features/single/login.feature:3
     Given I go to "http://crossbrowsertesting.github.io/login-form.html"      # FeatureContext::iGoTo()
     When I fill in "#username" with "badusername@crossbrowsertesting.com"     # FeatureContext::iFillInWith()
     And I fill in "#password" with "badpassword"                              # FeatureContext::iFillInWith()
     And I press ".form-actions > button"                                      # FeatureContext::iPress()
     Then I should see ".alert-danger" say "Username or password is incorrect" # FeatureContext::iShouldSeeSay()
 
-  Scenario: Login with good credentials                                       # /Users/johnreese/Google Drive/CBT/repos/behat-browserstack/features/single/login.feature:10
+  Scenario: Login with good credentials                                       # /Users/johnreese/Google Drive/CBT/repos/behat/features/single/login.feature:10
     Given I go to "http://crossbrowsertesting.github.io/login-form.html"      # FeatureContext::iGoTo()
     When I fill in "#username" with "tester@crossbrowsertesting.com"          # FeatureContext::iFillInWith()
     And I fill in "#password" with "test123"                                  # FeatureContext::iFillInWith()
