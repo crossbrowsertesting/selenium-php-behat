@@ -26,7 +26,7 @@ class CBTContext extends Behat\Behat\Context\BehatContext
         $test_run_id = getenv("TEST_RUN_ID") ? getenv("TEST_RUN_ID") : 0; 
         
         # build the webdriver hub URL (e.g. https://username:authkey@crossbrowsertesting.com:80/wd/hub)
-        $url = "https://" . $GLOBALS["CBT_USERNAME"] . ":" . $GLOBALS["CBT_AUTHKEY"] . "@" . $CONFIG["server"] ."/wd/hub";
+        $url = "http://" . $GLOBALS["CBT_USERNAME"] . ":" . $GLOBALS["CBT_AUTHKEY"] . "@" . $CONFIG["server"] .":80/wd/hub";
 
         # get the capabilities for this test_run_id 
         # caps contains the os, browser, and resolution
